@@ -1,0 +1,85 @@
+<div class="row" ng-controller="LotteryConfigController">
+   <div class="col-xs-12">
+       <div class="title">
+            <a ui-sref="app.homePage">首页</a> > 
+            <span issue expect="{{ data.expect }}" lottery-name="{{ data.lottery_name }}"></span>
+       </div>
+   </div>
+   <div class="col-xs-12">
+         <div class="panel panel-set">
+             <p class="p-title" ng-bind="data.lottery_name + '信息配置'"></p>
+             <ul class="panel-ul clearfix">
+                 <li style="width: 20%;">是否可购买：
+                     <span ng-show="!isEdit">{{ data.is_open ? '是' : '否' }}</span>
+                     <input type="checkbox" ng-model="data.is_open" ng-show="isEdit">
+                 </li>
+                 <li style="width: 35%;">开奖时间：
+                     <span ng-show="!isEdit" ng-bind="data.lottery_time_explain"></span>
+                     <input type="text" ng-model="data.lottery_time_explain" class="lotteryTime-input" ng-show="isEdit">
+                 </li>
+                 <li style="width: 25%;">投注截止时间：开奖前
+                     <span ng-show="!isEdit" ng-bind="data.stop_buying_time + ' 秒钟'"></span>
+                     <div num-select num="data.stop_buying_time" ng-show="isEdit"></div>
+                 </li>
+                 <li style="width: 20%;">
+                     <p style="float: right;"><a href="" ng-click="showEdit()" ng-show="!isEdit">修改</a></p>
+                     <p style="float: right;"><a href="" ng-click="showEdit()" ng-show="isEdit">保存</a></p>
+                 </li>
+             </ul>
+         </div>
+         <div class="panel panel-set">
+             <p class="p-title">下期开奖信息</p>
+             <ul class="panel-ul clearfix">
+                 <li style="width: 20%;">期号：
+                     <span ng-bind="data.next_expect"></span>
+                 </li>
+                 <li style="width: 35%;">开奖时间：
+                     <span ng-bind="data.next_opentime | timeFilter"></span>
+                 </li>
+                 <li style="width: 25%;">状态：
+                     <span style="color: #7BB5F7;" ng-bind="data.deadline > 0 ? '待开' : '已开奖' "></span>
+                 </li>
+                 <li style="width: 20%;">
+                     <div timer-btn start-time="data.deadline" get-data="getData(data.next_opentime)"></div>
+                 </li>
+             </ul>
+             <table class="bgTable bg-white" style="margin-top: 50px;">
+               <tbody class="ball-details">
+                    <tr>
+                        <td colspan="2">
+                            <p class="ball-details-title">开奖记录</p>
+                        </td>
+                    </tr>
+                    <tr class="winningUser" ng-controller="LotteryHistoryController">
+                        <td colspan="2">
+                            <table class="bgTable">
+                                <thead>
+                                    <tr>
+                                        <th>记录ID</th>
+                                        <th>期次</th>
+                                        <th>开奖时间</th>
+                                        <th>开奖号码</th>
+                                        <th>购买金额</th>
+                                        <th>中奖金额</th>
+                                        <th>操作</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="d in data.mod_data">
+                                        <td ng-bind="d.record_id"></td>
+                                        <td ng-bind="d.expect"></td>
+                                        <td ng-bind="(d.opentime ? d.opentime : return) * 1000 | date: 'yyyy-MM-dd hh:mm'"></td>
+                                        <td ng-bind="d.opencode" style="color: #EA5A5A"></td>
+                                        <td ng-bind="d.buy_score"></td>
+                                        <td ng-bind="d.issue_score"></td>
+                                        <td><a ui-sref="app.lotteryDetails" ng-click="lotteryDetails(d.lottery_code, d.expect)">详情</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+               </tbody>
+             </table>
+         </div>
+   </div>
+</div>

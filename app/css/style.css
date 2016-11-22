@@ -1,0 +1,499 @@
+.sidebar {
+    background-color: #1E1D25;
+}
+.sidebar > .nav > li.active, 
+.sidebar > .nav > li.open, 
+.sidebar > .nav > li.active > a, 
+.sidebar > .nav > li.open > a, 
+.sidebar > .nav > li.active .nav, 
+.sidebar > .nav > li.open .nav {
+    background-color: #19181E;
+    color: #EA5A5A;
+}
+.sidebar > .nav > li.active {
+    border-left-color: #EA5A5A;
+}
+.sidebar > .nav > li > a:focus, 
+.sidebar > .nav > li > .nav-item:focus, 
+.sidebar > .nav > li > a:hover, 
+.sidebar > .nav > li > .nav-item:hover {
+    color: #EA5A5A;
+}
+.sidebar > .nav > li > a, 
+.sidebar > .nav > li > .nav-item {
+    color: #fff;
+}
+.wrapper > .aside {
+    background-color: #1E1D25;
+}
+.sidebar-subnav {
+    background-color: #19181E;
+}
+.sidebar-subnav > li > a, 
+.sidebar-subnav > li > .nav-item {
+    color: #969698;
+}
+.sidebar-subnav > li.active > a, 
+.sidebar-subnav > li.active > .nav-item {
+    color: #EA5A5A;
+}
+.sidebar-subnav > li > a:focus, 
+.sidebar-subnav > li > .nav-item:focus, 
+.sidebar-subnav > li > a:hover, 
+.sidebar-subnav > li > .nav-item:hover {
+    color: #EA5A5A;
+}
+@media only screen and (min-width: 768px) {
+  .wrapper > .aside {
+    z-index: 121;
+  }
+  .topnavbar {
+    background-color: #fff;
+    background-image: -webkit-linear-gradient(left, #fff 0%, #fff 100%);
+    background-image: -o-linear-gradient(left, #fff 0%, #fff 100%);
+    background-image: linear-gradient(to right, #fff 0%, #fff 100%);
+  }
+  .topnavbar .navbar-nav > li > a,
+  .topnavbar .navbar-nav > .open > a {
+    color: #7290AC;
+  }
+  .topnavbar .navbar-nav > li > a:hover,
+  .topnavbar .navbar-nav > .open > a:hover,
+  .topnavbar .navbar-nav > li > a:focus,
+  .topnavbar .navbar-nav > .open > a:focus {
+    color: #EA5A5A;
+  }
+  .content-wrapper {
+    padding: 0px 20px;
+  }
+}
+div.title {
+    margin: 40px 0 15px 0;
+}
+.bgTable {
+    width: 100%;
+}
+
+.bgTable > thead {
+    background-color: #EAEEF1;
+}
+.bgTable > thead > tr > th {
+    font-weight: 500;
+    color: #7895AF;
+}
+.bgTable > thead > tr > th, .bgTable > tbody > tr > td{
+    padding: 10px 25px;
+}
+.ball-panel {
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+}
+.ball-panel > img {
+    display: block;
+    margin: 15px auto;
+    width: 80px;
+    height: 80px;
+}
+.select-btn {
+    padding: 3px 16px;
+}
+.btn-group, .btn-group-vertical {
+    margin-left: 10px;
+}
+.bgTable > tbody.ball-details > tr > td.IGKbet > ul {
+    margin-bottom: 20px;
+}
+.bgTable > tbody.ball-details > tr.IGKbet > td:first-child > ul > li{
+    list-style: none;
+    margin-bottom: 10px;
+}
+.bgTable > tbody.ball-details > tr.IGKbet > td:first-child > ul > li > span {
+    color: #EA5A5A;
+}
+.bgTable > tbody.ball-details > tr.IGKbet > td:last-child > table {
+    border: 1px solid #eee;
+}
+.bgTable > tbody.ball-details > tr.IGKbet > td:last-child > table.bgTable {
+    border: 1px solid #eee;
+    float: right;
+    width: 50%;
+    position: relative;
+    top: -10%;
+    background-color: #FCFCFC;
+}
+
+.bgTable > tbody.ball-details > tr.IGKbet > td:last-child > table.bgTable > thead {
+    background-color: #FCFCFC;
+    border-bottom: 1px solid #eee;
+}
+.bgTable > tbody.ball-details > tr.IGKbet > td:last-child > table.bgTable > thead > tr > th {
+    font-weight: 700;
+    color: inherit;
+}
+.bgTable > tbody.ball-details > tr.winningUser > td > table.bgTable {
+    margin-top: -30px;
+    background-color: #FCFCFC;
+}
+.bgTable > tbody.ball-details > tr.winningUser > td > table.bgTable > thead {
+    background-color: #FCFCFC;
+    border-bottom: 1px solid #eee;
+}
+.bgTable > tbody.ball-details > tr.winningUser > td > table.bgTable > thead > tr > th {
+    font-weight: 500;
+    color: inherit;
+}
+.bgTable > tbody.ball-details > tr.winningUser > td > table.bgTable > tbody > tr {
+    border-bottom: 1px solid #eee;
+}
+.panel-set {
+    padding: 15px 0;
+    font-size: 14px;
+}
+.panel-set > .row {
+    margin: 10px 0;
+}
+.panel-set > .row > div.set-title {
+    text-align: right;
+    line-height: 35px;
+}
+.panel-set > .p-title {
+    padding: 0 15px 10px 15px;
+    color: #87A2BC;
+    border-bottom: 1px solid #eee;
+}
+.panel-set > .panel-ul {
+    padding: 15px;
+}
+.panel-set > .panel-ul > li{
+    list-style: none;
+    float: left;
+    height: 30px;
+    line-height: 30px;
+}
+.panel-set > .panel-ul > li > span {
+    color: #000;
+}
+.panel-set > .panel-ul > li:last-child {
+    float: right;
+    text-align: right;
+}
+.header {
+    width: 50px;
+    height: 50px;
+}
+
+.descendantSort {
+    background-color: #F8F9FB;
+    color: #999;
+}
+.descendantSort > td:first-child{
+    padding-left: 40px;
+}
+.tree-view {
+    padding: 0;
+}
+.tree-view > li {
+    list-style: none;
+}
+.node-con {
+    display: inline-block;
+    width: 24%;
+}
+#sortTbody > tr > td {
+    padding: 0;
+}
+.tree-expanded {
+    background-color: #F8F9FB;
+}
+.tree-leaf:hover, .tree-collapsed:hover {
+    background-color: #EFEFEF;
+}
+.tree-expanded .a1 {
+    margin-left: -20px;
+}
+.tree-expanded .tree-leaf:hover {
+    background-color: #EFEFEF;
+}
+.tree-expanded .tree-leaf .node-con:first-child {
+    padding-left: 20px;
+}
+.datePicker {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+.datePicker li {
+    float: left;
+    list-style: none;
+    height: 30px;
+}
+.datePicker li input {
+    padding: 3px 12px;
+    max-width: 100px;
+    height: 100%;
+    border: none;
+    background-color: #EAEEF1;
+    border-top: 1px solid #EAEAEA;
+    border-bottom: 1px solid #EAEAEA;
+}
+.datePicker li button {
+    width: 30px;
+    height: 100%;
+    border-radius: 0;
+}
+.datePicker li button i {
+    color: #7895AF;
+}
+.numSelect {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    position: relative;
+    top: -2px;
+}
+.numSelect li {
+    float: left;
+    list-style: none;
+    height: 20px;
+}
+.numSelect li input {
+    max-width: 40px;
+    height: 100%;
+    border: none;
+    background-color: #fff;
+    border-top: 1px solid #EAEAEA;
+    border-bottom: 1px solid #EAEAEA;
+    font-size: 0.8em;
+    text-align: center;
+    vertical-align: middle;
+}
+.numSelect li button {
+    width: 20px;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+    color: #bbb;
+}
+.bgTable-center thead tr th, 
+.bgTable-center tbody tr td {
+    text-align: center;
+}
+.numSelect li input.ng-invalid {
+    border: 1px solid red;
+}
+.bgTable-center tbody tr:hover {
+    background-color: #F8F9FB;
+}
+
+.lotteryTime-input {
+    border: 1px solid #EAEAEA;
+    padding: 3px 12px;
+    height: 100%;
+    width: 65%;
+}
+.form-panel {
+    padding: 25px;
+}
+.form-panel > .big-title {
+    font-size: 16px;
+    color: #000;
+    letter-spacing: 2px;
+}
+.form-panel > button {
+    margin-top: 20px;
+}
+.form-con-div {
+    padding: 15px 0;
+}
+.form-con-div > .form-con-title {
+    color: #9F9F9F;
+}
+.form-con-div > input {
+    width: 300px;
+    padding: 3px 12px;
+    border: 1px solid #EBEFF1;
+}
+.form-con-div > .col-xs-3 {
+    padding: 0;
+}
+.form-con-div .pvw-div {
+    width: 255px;
+    height: 180px;
+    border: 1px solid #EFF2F4;
+    position: relative;
+}
+.form-con-div .pvw-div img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.form-con-div .pvw-div:hover p {
+    opacity: 1;
+}
+.form-con-div .pvw-div p {
+    padding: 5px 10px;
+    margin: 0;
+    background-color: rgba(0,0,0,0.5);
+    text-align: right;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    opacity: 0;
+    transition: all .5s;
+}
+
+.form-con-div .pvw-div p a {
+  color: #FFFFFF;
+}
+
+@media \0screen\,screen\9 {
+  .form-con-div .pvw-div p {
+    background-color:#000000;
+    filter:Alpha(opacity=50);
+    position:static; 
+    *zoom:1; 
+  }
+  .form-con-div .pvw-div p a {
+    position: relative;/* 设置子元素为相对定位，可让子元素不继承Alpha值 */
+  }  
+}
+
+.form-con-div .uploadImg-div {
+    width: 255px;
+    height: 180px;
+    border: 1px dashed #DEE4E7;
+    text-align: center;
+    position: relative;
+}
+.form-con-div .uploadImg-div > p {
+    margin-top: 10px;
+}
+
+.form-con-div .uploadImg-div > .tip {
+    display: block;
+    color: #B5B5B5;
+    margin-top: 5px;
+    font-size: .8em;
+}
+.form-con-div .uploadImg-div > .font {
+    font-size: 15px;
+    margin-top: 40px;
+    color: #EA5A59;
+}
+.form-con-div .uploadImg-div > .font .fa-plus:before{
+    vertical-align: middle;
+}
+
+.file-input {
+    width: 100%;
+    height: 100%;
+    outline: medium none;
+    position: absolute;
+    filter: alpha(opacity=0);
+    -moz-opacity: 0;
+    opacity: 0; 
+    left: 0px;
+    top: 0px;
+    z-index: 9999;
+    cursor: pointer;
+}
+.page {
+    margin: 15px 0;
+    padding: 0;
+    float: right;
+}
+.page li {
+    list-style: none;
+    float: left;
+    height: 30px;
+    line-height: 30px;
+}
+.page li input{
+    padding: 3px 5px;
+    height: 100%;
+    width: 50px;
+    border: none;
+    background-color: #EAEEF1;
+    text-align: center;
+    margin-right: 10px;
+}
+.page li span {
+    margin-right: 15px;
+}
+.page li a {
+    text-decoration: none;
+    outline: none;
+    margin-right: 15px;
+}
+#dpd1, #dpd2 {
+    width: 150px;
+}
+
+.login-box {
+    width: 300px;
+    margin: 180px auto;
+    border-radius: 10px;
+    background-color: #fff;
+    border: 1px solid #EBEFF1;
+    /*position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);*/
+}
+.login-box .login-name {
+    padding: 15px 0;
+    margin: 0;
+    border-radius: 10px 10px 0 0;
+    text-align: center;
+    color: #fff;
+    background-color: #1E1D25;
+    font-size: 1.6em;
+}
+.login-box .login-start {
+    padding: 30px;
+}
+.login-box .login-start form input{
+    width: 100%;
+    border: none;
+    padding: 6px 12px;
+    background-color: #F5F7FA;
+    margin: 5px 0;  
+}
+.login-box .login-start form button {
+    margin-top: 15px;
+    width: 100%;
+    float: right;
+}
+.recharge-input {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.recharge-input input {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    height: auto !important;
+    border: 1px solid #5D9CEC !important;
+}
+.rechargeLogo {
+    width: 20px;
+    height: 20px;
+    vertical-align: text-bottom;
+    background-color: yellow;
+    border-radius: 50%;
+}
+
+.noDatacheckInsTr {
+    border: 1px solid #f05050;
+}
+.navbar-header {
+    background-color: #1E1D25 !important;
+}

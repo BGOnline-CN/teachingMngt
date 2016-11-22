@@ -1,0 +1,12 @@
+<div ng-controller="LoginController">
+    <div class="login-box">
+        <p class="login-name">欢迎登录诸葛彩票</p>
+        <div class="login-start clearfix">
+            <form name="loginForm" ng-submit="go()" novalidate>
+                <input type="text" name="username" ng-model="param.username" placeholder="用户名" autofocus="autofocus">
+                <input type="password" name="password" ng-model="param.password" placeholder="密码">
+                <button type="submit" class="btn btn-danger">登录</button>
+            </form>
+        </div>
+    </div>
+</div>

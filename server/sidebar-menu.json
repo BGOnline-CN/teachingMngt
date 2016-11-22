@@ -1,0 +1,53 @@
+[
+  {
+    "我是一行注释": {
+      "sref": "app.homePage",
+      "icon": "",
+      "translate": "sidebar.nav.HOMEPAGE"
+    }
+  },
+  { 
+    "我是一行注释": {
+      "sref": "app.category",
+      "icon": "",
+      "translate": "sidebar.nav.CATEGORY"
+    }
+  },
+  {
+    "sref": "#",
+    "icon": "",
+    "submenu": [
+      {
+        "sref": "app.news", 
+        "text": "热门资讯",
+        "translate": "sidebar.nav.ARTICLE.NEWS" 
+      },
+      {
+        "sref": "app.strategy",
+        "text": "攻略",
+        "translate": "sidebar.nav.ARTICLE.STRATEGY"
+      }    
+    ],
+    "translate": "sidebar.nav.ARTICLE"
+  },
+  {
+    "sref": "app.ad",
+    "icon": "",
+    "translate": "sidebar.nav.AD"
+  },
+  {
+    "sref": "app.userList",
+    "icon": "",
+    "translate": "sidebar.nav.USERLIST"
+  },
+  {
+    "sref": "app.check-ins",
+    "icon": "",
+    "translate": "sidebar.nav.CHECK-INS"
+  },
+  {
+    "sref": "app.system",
+    "icon": "",
+    "translate": "sidebar.nav.SYSTEM"
+  }
+]
