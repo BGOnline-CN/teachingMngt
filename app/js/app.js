@@ -1,10 +1,9 @@
 /*!
  * 
- * Angle - Bootstrap Admin App + AngularJS
- * 
- * Author: @themicon_co
- * Website: http://themicon.co
- * License: http://support.wrapbootstrap.com/knowledge_base/topics/usage-licenses
+ * Author: BGONLINE
+ * Website: http://bgonline.cn
+ * version: 0.0.1
+ * 2016-11-23
  * 
  */
 
@@ -34,17 +33,6 @@ App.run(["$rootScope", "$state", "$stateParams",  '$window', '$templateCache', f
     $rootScope.$stateParams = $stateParams;
     $rootScope.$storage = $window.localStorage;
 
-    // 彩票列表图片
-    $rootScope.lotteryList = [
-        { img:'app/img/ssq.png', name: '双色球', lotteryCode: 'ssq'},
-        { img:'app/img/qxc.png', name: '七星彩', lotteryCode: 'qxc'},
-        { img:'app/img/cqssc.png', name: '时时彩', lotteryCode: 'cqssc'},
-        { img:'app/img/dlt.png', name: '大乐透', lotteryCode: 'dlt'},
-        { img:'app/img/pl5.png', name: '排列5', lotteryCode: 'pl5'},
-        { img:'app/img/qlc.png', name: '七乐彩', lotteryCode: 'qlc'},
-        { img:'app/img/fc3d.png', name: '福彩3D', lotteryCode: 'fc3d'}
-    ]
-
     $rootScope.rootUrl = 'http://192.168.1.200/201609zhugecaipiao/backend/web/';
     $rootScope.rootImgUrl = 'http://192.168.1.200/201609zhugecaipiao';
 
@@ -61,8 +49,8 @@ App.run(["$rootScope", "$state", "$stateParams",  '$window', '$templateCache', f
     // Scope Globals
     // ----------------------------------- 
     $rootScope.app = {
-      name: '诸葛彩票',
-      description: '诸葛彩票',
+      name: '校园管理系统',
+      description: '校园管理系统',
       year: ((new Date()).getFullYear()),
       layout: {
         isFixed: true,
@@ -113,115 +101,163 @@ function ($stateProvider, $locationProvider, $urlRouterProvider, helper) {
         controller: 'AppController',
         resolve: helper.resolveFor('modernizr', 'icons', 'layer')
     })
+
+
     .state('app.homePage', {
         url: '/homePage',
         title: '首页',
         templateUrl: helper.basepath('homePage.html')
     })
     
-    .state('app.lotteryDetails', {
-        url: '/lotteryDetails',
-        title: '开奖详情',
-        templateUrl: helper.basepath('lotteryDetails.html')
+
+    .state('app.scoreMgmt', {
+        url: '/scoreMgmt',
+        title: '成绩管理',
+        templateUrl: helper.basepath('scoreMgmt.html')
     })
-    .state('app.lotteryConfig', {
-        url: '/lotteryConfig',
-        title: '彩票配置',
-        templateUrl: helper.basepath('lotteryConfig.html')
+    .state('app.scoreEntry', {
+        url: '/scoreEntry',
+        title: '成绩录入',
+        templateUrl: helper.basepath('scoreEntry.html')
     })
-    .state('app.category', {
-        url: '/category',
-        title: '分类列表',
-        templateUrl: helper.basepath('category.html'),
-        resolve: helper.resolveFor('treeControl')   
+    .state('app.scoreStats', {
+        url: '/scoreStats',
+        title: '成绩数据统计',
+        templateUrl: helper.basepath('scoreStats.html')
     })
-    .state('app.addCategory', {
-        url: '/addCategory',
-        title: '分类管理',
-        templateUrl: helper.basepath('addCategory.html')
-    })
-    .state('app.news', {
-        url: '/news',
-        title: '热门资讯',
-        templateUrl: helper.basepath('news.html')
-    })
-    .state('app.strategy', {
-        url: '/strategy',
-        title: '攻略',
-        templateUrl: helper.basepath('strategy.html')
-    })
-    .state('app.ad', {
-        url: '/ad',
-        title: '广告列表',
-        templateUrl: helper.basepath('ad.html')
-    })
-    .state('app.userList', {
-        url: '/userList',
-        title: '用户列表',
-        templateUrl: helper.basepath('userList.html')
-    })
-    .state('app.check-ins', {
-        url: '/check-ins',
-        title: '签到配置',
-        templateUrl: helper.basepath('check-ins.html')
+    .state('app.scoreInquiry', {
+        url: '/scoreInquiry',
+        title: '成绩查询',
+        templateUrl: helper.basepath('scoreInquiry.html')
     })
 
-    .state('app.addArticle', {
-        url: '/addArticle',
-        title: '文章管理',
-        templateUrl: helper.basepath('addArticle.html'),
-        resolve: helper.resolveFor('jquery', 'editor', 'angularFileUpload') 
+
+    .state('app.studentStatusMgmt', {
+        url: '/studentStatusMgmt',
+        title: '学籍管理',
+        templateUrl: helper.basepath('studentStatusMgmt.html')
+    })
+    .state('app.studentInfo', {
+        url: '/studentInfo',
+        title: '学生信息',
+        templateUrl: helper.basepath('studentInfo.html')
+    })
+    .state('app.schoolRoll', {
+        url: '/schoolRoll',
+        title: '学籍查找',
+        templateUrl: helper.basepath('schoolRoll.html')
+    })
+    .state('app.addSchoolRoll', {
+        url: '/addSchoolRoll',
+        title: '新增学籍',
+        templateUrl: helper.basepath('addSchoolRoll.html')
     })
 
-    .state('app.addAd', {
-        url: '/addAd',
-        title: '广告管理',
-        templateUrl: helper.basepath('addAd.html'),
-        resolve: helper.resolveFor('jquery', 'angularFileUpload', 'datepicker') 
+
+    .state('app.examMgmt', {
+        url: '/examMgmt',
+        title: '考试管理',
+        templateUrl: helper.basepath('examMgmt.html')
+    })
+    .state('app.createExamPlan', {
+        url: '/createExamPlan',
+        title: '创建考试计划',
+        templateUrl: helper.basepath('createExamPlan.html')
+    })
+    .state('app.queryExamPlan', {
+        url: '/queryExamPlan',
+        title: '考试计划查询',
+        templateUrl: helper.basepath('queryExamPlan.html')
     })
 
-    .state('app.system', {
-        url: '/system',
-        title: '系统配置',
-        templateUrl: helper.basepath('system.html')
+
+    .state('app.roleMgmt', {
+        url: '/roleMgmt',
+        title: '角色管理',
+        templateUrl: helper.basepath('roleMgmt.html')
+    })
+    .state('app.guidancePlace', {
+        url: '/guidancePlace',
+        title: '教导处',
+        templateUrl: helper.basepath('guidancePlace.html')
+    })
+    .state('app.educResearchGroup', {
+        url: '/educResearchGroup',
+        title: '教研组',
+        templateUrl: helper.basepath('educResearchGroup.html')
+    })
+    .state('app.gradeGroup', {
+        url: '/gradeGroup',
+        title: '年级组',
+        templateUrl: helper.basepath('gradeGroup.html')
+    })
+    .state('app.teacherInCharge', {
+        url: '/teacherInCharge',
+        title: '班主任',
+        templateUrl: helper.basepath('teacherInCharge.html')
+    })
+    .state('app.teacher', {
+        url: '/teacher',
+        title: '任课教师',
+        templateUrl: helper.basepath('teacher.html')
     })
 
-    .state('app.lotteryHistory', {
-        url: '/lotteryHistory',
-        title: '开奖历史',
-        templateUrl: helper.basepath('lotteryHistory.html')
+
+    .state('app.userMgmt', {
+        url: '/userMgmt',
+        title: '用户管理',
+        templateUrl: helper.basepath('userMgmt.html')
+    })
+    .state('app.userAudit', {
+        url: '/userAudit',
+        title: '用户审核',
+        templateUrl: helper.basepath('userAudit.html')
+    })
+    .state('app.accountMgmt', {
+        url: '/accountMgmt',
+        title: '用户账户管理',
+        templateUrl: helper.basepath('accountMgmt.html')
     })
 
-    .state('app.userOrder', {
-        url: '/userOrder',
-        title: '订单查询',
-        templateUrl: helper.basepath('userOrder.html')
+
+    .state('app.permissionsMgmt', {
+        url: '/permissionsMgmt',
+        title: '权限分配',
+        templateUrl: helper.basepath('permissionsMgmt.html')
     })
-    .state('app.coupon', {
-        url: '/coupon',
-        title: '点券列表',
-        templateUrl: helper.basepath('coupon.html')
+
+
+    .state('app.schoolConfig', {
+        url: '/schoolConfig',
+        title: '学校配置',
+        templateUrl: helper.basepath('schoolConfig.html')
     })
-    .state('app.fundsList', {
-        url: '/fundsList',
-        title: '资金明细',
-        templateUrl: helper.basepath('fundsList.html')
+    .state('app.gradeConfig', {
+        url: '/gradeConfig',
+        title: '年级配置',
+        templateUrl: helper.basepath('gradeConfig.html')
     })
-    .state('app.checkInsList', {
-        url: '/checkInsList',
-        title: '签到记录',
-        templateUrl: helper.basepath('checkInsList.html')
+    .state('app.classConfig', {
+        url: '/classConfig',
+        title: '班级配置',
+        templateUrl: helper.basepath('classConfig.html')
     })
-    .state('app.shareList', {
-        url: '/shareList',
-        title: '分享详情',
-        templateUrl: helper.basepath('shareList.html')
+    .state('app.subjectConfig', {
+        url: '/subjectConfig',
+        title: '科目配置',
+        templateUrl: helper.basepath('subjectConfig.html')
     })
-    .state('app.afterNoList', {
-        url: '/afterNoList',
-        title: '追号记录',
-        templateUrl: helper.basepath('afterNoList.html')
+    .state('app.schoolInfoMgmt', {
+        url: '/schoolInfoMgmt',
+        title: '学校信息管理',
+        templateUrl: helper.basepath('schoolInfoMgmt.html')
     })
+    .state('app.schoolModuleMgmt', {
+        url: '/schoolModuleMgmt',
+        title: '学校模块管理',
+        templateUrl: helper.basepath('schoolModuleMgmt.html')
+    })
+
 
 
 
@@ -1842,7 +1878,7 @@ App.controller('LoginController', ["$scope", 'ConnectApi', '$state', 'ParamTrans
           var data = ConnectApi.data(response);
           $scope.data = data.data;
           if($scope.data) {
-            var token = $scope.data.token
+            var token = $scope.data.token;
             ParamTransmit.setParam({ token });
             $state.go('app.homePage');
           }
